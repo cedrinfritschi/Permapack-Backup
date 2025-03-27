@@ -126,22 +126,20 @@
 
 ## **Ergänzende Fragen & Antworten**
 ### **Sicherung von Produktionsdaten**
-- Werden Produktionsdaten separat gesichert? Falls ja, wie oft und in welchem Umfang?
+- Werden Produktionsdaten separat gesichert?
+  - **Nein**
 
 ### **Backup-Technologie**
 - Welche Backup-Technologie wird genutzt?
   - **Veeam Backup**
-  - Setzt Permapack auf Cloud-basierte Lösungen (AWS, Azure) oder eigene Infrastruktur?
 
 ### **Schutz gegen Ransomware**
 - Wie werden Backups gegen Ransomware geschützt?
-  - **Air-Gapped-Backup oder spezielle Schutzmaßnahmen?**
   - **Es gibt Anti-Ransomware-Sicherheitssysteme**
 
 ### **Backup-Aufbewahrung & Archivverwaltung**
 - Wie lange werden Backups aufbewahrt?
   - **10 Jahre Archivierungsstrategie**
-  - Wie wird die Integrität über lange Zeiträume sichergestellt?
 
 ### **Hohe Verfügbarkeit & Notfallwiederherstellung**
 - Wie wird eine hohe Verfügbarkeit sichergestellt?
