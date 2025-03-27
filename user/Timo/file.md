@@ -15,11 +15,11 @@
 - **3 Rechenzentren**
 - **Backup-Lösung:** Veeam Backup & Replication
 - **M365 Backup:**  
-  - 265 Lizenzen (Kosten: 5.500 CHF)
-  - 260 User
-  - 320 Postfächer
-  - 55 Teams-Gruppen
-  - 10 SharePoint-Seiten
+  - **265 Lizenzen** (Kosten: 5.500 CHF)
+  - **260 User**
+  - **320 Postfächer**
+  - **55 Teams-Gruppen**
+  - **10 SharePoint-Seiten**
 - **Backup-Daten:**
   - **Gesamt:** 11 TB Backup
   - **Produktivdaten:** 1,3 TB Source-Daten (+15 GB pro Tag)
@@ -37,12 +37,12 @@
   - **65 TB Source-Daten**
   - **115 TB Backups** (direkt auf NAS verfügbar)
 - **Backup-Strategie:**
-  - High-Server: 14 Snapshots
-  - Low-Server: 7 Snapshots
+  - **High-Server:** 14 Snapshots
+  - **Low-Server:** 7 Snapshots
   - **Backup läuft durchgehend**
   - **Synthetic Full Backup** (wöchentlich)
   - **Application-Aware Processing**
-  - Kopien werden bis zu **1 Jahr** in einem Copy-Job gespeichert
+  - **Kopien werden bis zu 1 Jahr in einem Copy-Job gespeichert**
 
 ### **Backup-Speicher**
 - **1x NAS:** 16x 4 TB SSD
@@ -55,20 +55,20 @@
   - **Monatsbänder** (Aufbewahrung: 3-6 Monate)
   - **Jahresbänder** (Test zu Beginn, Aufbewahrung: 10 Jahre)
 - **Lagerung:**
-  - Tapes werden im Tresor aufbewahrt
+  - **Tapes werden im Tresor aufbewahrt**
   - **Zufallstests im November** (Funktion des Bandes, Cloud Restore, Wiederherstellungszeit, Test-VM-Größe)
 
 ---
 
 ## **Backup Jobs**
-- **Tägliche Sicherung**
-  - High-Server: 14 Tage Aufbewahrung
-  - Low-Server: 7 Tage Aufbewahrung
+- **Tägliche Sicherung:**
+  - **High-Server:** 14 Tage Aufbewahrung
+  - **Low-Server:** 7 Tage Aufbewahrung
 - **2 Backup-Jobs:**
   - High & Low getrennt
   - Backup-Befehl über Veeam an vCenter → Snapshot → Backup-Speicherung → Snapshot-Löschung auf Produktivumgebung
 - **Tape-Job:**
-  - Backups werden nach Sicherung auf Tape übertragen
+  - **Backups werden nach Sicherung auf Tape übertragen**
 
 ---
 
@@ -122,30 +122,31 @@
   - Einzelne E-Mail
   - Kompletter Server
 
-Welche speziellen Maßnahmen hat Permapack für die Sicherung von Produktionsdaten implementiert?
-→ Werden die Daten von Produktionsanlagen (z. B. Maschinensteuerungen, Prozessdaten) separat gesichert, und falls ja, wie oft und in welchem Umfang?
-
-
-Welche Backup-Technologie nutzt Permapack zur Sicherung der System- und Anwendungsdaten?
-→ Setzt Permapack auf Cloud-basierte Lösungen wie AWS, Azure oder eine eigene Infrastruktur? Welche Backup-Software wird verwendet (z. B. Veeam, Acronis)?
-Veem Backup
-
-Wie werden die Backups von Permapack gegen Ransomware-Angriffe geschützt?
-→ Gibt es ein "Air-Gapped"-Backup oder andere spezifische Maßnahmen, um sicherzustellen, dass Backups nicht von Ransomware verschlüsselt oder gelöscht werden können?
-es giebt anti ransomeware sicherheits systeme
-
-Wie lange werden Backups von Permapack aufbewahrt, und wie wird das Backup-Archiv verwaltet?
-→ Gibt es eine Archivierungsstrategie für langfristige Aufbewahrung von Backups (z. B. 7 Jahre gesetzliche Aufbewahrungspflicht), und wie wird die Datenintegrität dieser Backups über einen langen Zeitraum gewährleistet?
-10 Jahre
-
-Wie wird das Backup/Restore-Konzept bei Permapack für eine hohe Verfügbarkeit (High Availability) der IT-Systeme während des Wiederherstellungsprozesses sichergestellt?
-→ Gibt es redundante Systeme oder eine Notfallinfrastruktur, die es ermöglicht, die Dienste von Permapack bei einem Ausfall innerhalb kürzester Zeit wiederherzustellen?
-Picket, Monitoring und 2 RZ für Redundanz
-
-
-Wie schnell kann Permapack eine Wiederherstellung im Falle eines kompletten Ausfalls der Hauptinfrastruktur durchführen?
-→ Gibt es eine genaue Zeitvorgabe für die vollständige Wiederherstellung aller Systeme, z. B. nach einem Rechenzentrumsausfall? Welche Ressourcen (z. B. Cloud, Notfallserver) stehen zur Verfügung, um dies zu ermöglichen?
-11 Tage
-
 ---
+
+## **Ergänzende Fragen & Antworten**
+### **Sicherung von Produktionsdaten**
+- Werden Produktionsdaten separat gesichert? Falls ja, wie oft und in welchem Umfang?
+
+### **Backup-Technologie**
+- Welche Backup-Technologie wird genutzt?
+  - **Veeam Backup**
+  - Setzt Permapack auf Cloud-basierte Lösungen (AWS, Azure) oder eigene Infrastruktur?
+
+### **Schutz gegen Ransomware**
+- Wie werden Backups gegen Ransomware geschützt?
+  - **Air-Gapped-Backup oder spezielle Schutzmaßnahmen?**
+  - **Es gibt Anti-Ransomware-Sicherheitssysteme**
+
+### **Backup-Aufbewahrung & Archivverwaltung**
+- Wie lange werden Backups aufbewahrt?
+  - **10 Jahre Archivierungsstrategie**
+  - Wie wird die Integrität über lange Zeiträume sichergestellt?
+
+### **Hohe Verfügbarkeit & Notfallwiederherstellung**
+- Wie wird eine hohe Verfügbarkeit sichergestellt?
+  - **Pikett, Monitoring & 2 RZ für Redundanz**
+
+- Wie schnell kann eine vollständige Wiederherstellung erfolgen?
+  - **11 Tage für vollständigen Restore nach einem Rechenzentrumsausfall**
 
