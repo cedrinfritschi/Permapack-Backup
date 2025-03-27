@@ -1,111 +1,126 @@
-# Permapack
-## IT Rollen
-Infrastruktur\
-Enterprise Infastructure Planing\
-Supporter\
-Lernende\
+# **Permapack IT & Datensicherung**
 
-## Datensicherung
-### Übersicht Infrastruktur
-400 Clients
-gröstenteils Clients
-88 Server (82 virtuell/ 5 physikalisch)
-3 Rechenzentren
-Veeam Backup & Replication
-Veem M365 265 Lizenzen 5500 CHF
-260 User
-320 Postfächer
-55 Teams Gruppen
-10 SharePoint Seiten
-Backup 11 TB
-Produktiv 1.3 TB Source-Daten
-+15 GB Pro Tag
-Backup auf Produktiven Storage auf einer VM
+## **IT Rollen**
+- **Infrastruktur**
+- **Enterprise Infrastructure Planning**
+- **Supporter**
+- **Lernende**
 
-### Veem Backup & Replication
-8 Socket Lizenzen 
-10'ooo CHF im Jahr
-3 Worker um backups zu beschleunigen
-Jeder ESx hat einen eigenen Worker
-Sichert 57 Server 65 TB an Source-Daten
-Altes ERP ist nicht mehr sicherungsrelevant
-Aktuell 115 TB an Backups direkt auf einem NAS verfügbar
-Server High und Low
-High Server 14 Snapshots
-Low Server 7 Snapshots
-Backüp läuft durchgehend
-Syntetic full backup es wird alle woche ein fullbackup berechnet
-Application Aware Processing
-Kpien werden bis zu einem jahr in einem copy job geschpeichert
-1x Nas 16x 4 TB SSD
-1x Nas 28x 8TB HDD
-LTO 9 11 TB da veam schon die datenkompriemiert hat nicht 30 TB
-HPE Tape Autoloader
-1 Cleaningtape
-8 Tagesbänder
-68 Wochenbänder 
-Sie Tapes werden in einen Tresor Gelagert
-Wochenband nach 2-3 monate
-Tagesbänder 1-2 Woche
-Monatsbänder 3-6 Monate
-Jahresband Test zu Beginn 10 Jahre
-Im November Zufallstest
-Funktion des Bandes
-Cloud Restore
-Dauer
-Grösse der Test-VM
+---
 
-### Backup Jobs
-Tägliche sicherung 
-high 14 Tage
-und low 7 Tage
-2 Backup jobs wegen high und Low
-Tape job wenn die backups gelesen wurde werden sie auf Tape geschrieben
-die jobs veem geht hin sendet befehl an vceneter vcenter erstellt snapshot und wird auf backup gespielt snapshot wird auf prod umgebung gelöscht
+## **Datensicherung**
+### **Übersicht Infrastruktur**
+- **400 Clients** (größtenteils Clients)
+- **88 Server** (82 virtuell / 5 physikalisch)
+- **3 Rechenzentren**
+- **Backup-Lösung:** Veeam Backup & Replication
+- **M365 Backup:**  
+  - 265 Lizenzen (Kosten: 5.500 CHF)
+  - 260 User
+  - 320 Postfächer
+  - 55 Teams-Gruppen
+  - 10 SharePoint-Seiten
+- **Backup-Daten:**
+  - **Gesamt:** 11 TB Backup
+  - **Produktivdaten:** 1,3 TB Source-Daten (+15 GB pro Tag)
+  - **Speicherung:** Backup auf produktivem Storage einer VM
 
-### Notfallkonzept
-Betrieb It-System
-Dokumentation der IT-Dienste
-Notfallreaktion
-Wiederherstellungskonzept
-Notfallübung
+---
 
-### CyberDefense
-überwachung mit PRTG inkl. Pikettorganisation
-externe Security Incident Respose Team
-Red Team wird nur einmal pro Jahr eingesetzt
-Awareness Kampagnen Phishing Mails (Portallösung und Schulungen)
-User ist das Schwächste glied in der IT-Sicherheit
+## **Veeam Backup & Replication**
+- **Lizenzen:** 8 Sockets (Kosten: 10.000 CHF pro Jahr)
+- **Backup-Performance:**
+  - 3 Worker zur Backup-Beschleunigung
+  - Jeder ESX-Host hat einen eigenen Worker
+- **Gesicherte Daten:**
+  - **57 Server**
+  - **65 TB Source-Daten**
+  - **115 TB Backups** (direkt auf NAS verfügbar)
+- **Backup-Strategie:**
+  - High-Server: 14 Snapshots
+  - Low-Server: 7 Snapshots
+  - **Backup läuft durchgehend**
+  - **Synthetic Full Backup** (wöchentlich)
+  - **Application-Aware Processing**
+  - Kopien werden bis zu **1 Jahr** in einem Copy-Job gespeichert
 
-### Service Level Agreement
-Servicezeit:
-Mo-Fr 08:00 - 17:00
-Reaktionszeit
-innert 1 Stunde
-Proaktive überwachung: wärhrend 06:-22 Uhr
+### **Backup-Speicher**
+- **1x NAS:** 16x 4 TB SSD
+- **1x NAS:** 28x 8 TB HDD
+- **LTO 9 Tape:** 11 TB (komprimierte Daten, nicht 30 TB)
+- **HPE Tape Autoloader**
+  - **1 Cleaning Tape**
+  - **8 Tagesbänder** (Aufbewahrung: 1-2 Wochen)
+  - **68 Wochenbänder** (Aufbewahrung: 2-3 Monate)
+  - **Monatsbänder** (Aufbewahrung: 3-6 Monate)
+  - **Jahresbänder** (Test zu Beginn, Aufbewahrung: 10 Jahre)
+- **Lagerung:**
+  - Tapes werden im Tresor aufbewahrt
+  - **Zufallstests im November** (Funktion des Bandes, Cloud Restore, Wiederherstellungszeit, Test-VM-Größe)
 
-### Notfallrektionen
-Kriesenstab vie Whatsapp-Gruppe
-Telefonliste auf Papier
-Kommunikationskonzept in Schublade
+---
 
-###  Wiederherstellungskonzept
-Intense Analysephase
-Wiederherstellung
-Wiederanfahrplan 11 Tagen full Restore
-Worstcase Alles verschlüsselt
-Cyberverschlüsselung
+## **Backup Jobs**
+- **Tägliche Sicherung**
+  - High-Server: 14 Tage Aufbewahrung
+  - Low-Server: 7 Tage Aufbewahrung
+- **2 Backup-Jobs:**
+  - High & Low getrennt
+  - Backup-Befehl über Veeam an vCenter → Snapshot → Backup-Speicherung → Snapshot-Löschung auf Produktivumgebung
+- **Tape-Job:**
+  - Backups werden nach Sicherung auf Tape übertragen
 
-### Notfallübungen
-IT-Audit
-Stromausfall einese Rechenzentrums
-Datenwiederherstellung (ein File, ein E-Mail und ein Server komplett)
+---
 
+## **Notfallkonzept**
+- **Betrieb der IT-Systeme**
+- **Dokumentation der IT-Dienste**
+- **Notfallreaktion**
+- **Wiederherstellungskonzept**
+- **Notfallübungen**
 
+---
 
+## **CyberDefense**
+- **Überwachung mit PRTG inkl. Pikettorganisation**
+- **Externes Security Incident Response Team**
+- **Red Team:** 1x jährlich
+- **Awareness-Kampagnen:**
+  - Phishing-Mails (Portallösung & Schulungen)
+  - „User ist das schwächste Glied in der IT-Sicherheit“
 
+---
 
+## **Service Level Agreement (SLA)**
+- **Servicezeit:** Mo-Fr 08:00 - 17:00
+- **Reaktionszeit:** innerhalb 1 Stunde
+- **Proaktive Überwachung:** 06:00 - 22:00
 
+---
 
+## **Notfallreaktionen**
+- **Krisenstab via WhatsApp-Gruppe**
+- **Telefonliste auf Papier verfügbar**
+- **Kommunikationskonzept physisch hinterlegt**
 
+---
+
+## **Wiederherstellungskonzept**
+- **Intensive Analysephase**
+- **Wiederherstellungsschritte**
+- **Wiederanfahrplan:** 11 Tage Full-Restore
+- **Worst-Case-Szenario:** Vollständige Verschlüsselung durch Cyberangriff
+- **Cyber-Verschlüsselungsschutz**
+
+---
+
+## **Notfallübungen**
+- **IT-Audit**
+- **Stromausfall eines Rechenzentrums**
+- **Datenwiederherstellungstests:**
+  - Einzelne Datei
+  - Einzelne E-Mail
+  - Kompletter Server
+
+---
 
