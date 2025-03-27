@@ -122,5 +122,30 @@
   - Einzelne E-Mail
   - Kompletter Server
 
+Welche speziellen Maßnahmen hat Permapack für die Sicherung von Produktionsdaten implementiert?
+→ Werden die Daten von Produktionsanlagen (z. B. Maschinensteuerungen, Prozessdaten) separat gesichert, und falls ja, wie oft und in welchem Umfang?
+
+
+Welche Backup-Technologie nutzt Permapack zur Sicherung der System- und Anwendungsdaten?
+→ Setzt Permapack auf Cloud-basierte Lösungen wie AWS, Azure oder eine eigene Infrastruktur? Welche Backup-Software wird verwendet (z. B. Veeam, Acronis)?
+Veem Backup
+
+Wie werden die Backups von Permapack gegen Ransomware-Angriffe geschützt?
+→ Gibt es ein "Air-Gapped"-Backup oder andere spezifische Maßnahmen, um sicherzustellen, dass Backups nicht von Ransomware verschlüsselt oder gelöscht werden können?
+es giebt anti ransomeware sicherheits systeme
+
+Wie lange werden Backups von Permapack aufbewahrt, und wie wird das Backup-Archiv verwaltet?
+→ Gibt es eine Archivierungsstrategie für langfristige Aufbewahrung von Backups (z. B. 7 Jahre gesetzliche Aufbewahrungspflicht), und wie wird die Datenintegrität dieser Backups über einen langen Zeitraum gewährleistet?
+10 Jahre
+
+Wie wird das Backup/Restore-Konzept bei Permapack für eine hohe Verfügbarkeit (High Availability) der IT-Systeme während des Wiederherstellungsprozesses sichergestellt?
+→ Gibt es redundante Systeme oder eine Notfallinfrastruktur, die es ermöglicht, die Dienste von Permapack bei einem Ausfall innerhalb kürzester Zeit wiederherzustellen?
+Picket, Monitoring und 2 RZ für Redundanz
+
+
+Wie schnell kann Permapack eine Wiederherstellung im Falle eines kompletten Ausfalls der Hauptinfrastruktur durchführen?
+→ Gibt es eine genaue Zeitvorgabe für die vollständige Wiederherstellung aller Systeme, z. B. nach einem Rechenzentrumsausfall? Welche Ressourcen (z. B. Cloud, Notfallserver) stehen zur Verfügung, um dies zu ermöglichen?
+11 Tage
+
 ---
 
