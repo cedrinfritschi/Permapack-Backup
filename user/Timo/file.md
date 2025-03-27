@@ -55,7 +55,55 @@ Cloud Restore
 Dauer
 Grösse der Test-VM
 
-### Demonstration
+### Backup Jobs
+Tägliche sicherung 
+high 14 Tage
+und low 7 Tage
+2 Backup jobs wegen high und Low
+Tape job wenn die backups gelesen wurde werden sie auf Tape geschrieben
+die jobs veem geht hin sendet befehl an vceneter vcenter erstellt snapshot und wird auf backup gespielt snapshot wird auf prod umgebung gelöscht
+
+### Notfallkonzept
+Betrieb It-System
+Dokumentation der IT-Dienste
+Notfallreaktion
+Wiederherstellungskonzept
+Notfallübung
+
+### CyberDefense
+überwachung mit PRTG inkl. Pikettorganisation
+externe Security Incident Respose Team
+Red Team wird nur einmal pro Jahr eingesetzt
+Awareness Kampagnen Phishing Mails (Portallösung und Schulungen)
+User ist das Schwächste glied in der IT-Sicherheit
+
+### Service Level Agreement
+Servicezeit:
+Mo-Fr 08:00 - 17:00
+Reaktionszeit
+innert 1 Stunde
+Proaktive überwachung: wärhrend 06:-22 Uhr
+
+### Notfallrektionen
+Kriesenstab vie Whatsapp-Gruppe
+Telefonliste auf Papier
+Kommunikationskonzept in Schublade
+
+###  Wiederherstellungskonzept
+Intense Analysephase
+Wiederherstellung
+Wiederanfahrplan 11 Tagen full Restore
+Worstcase Alles verschlüsselt
+Cyberverschlüsselung
+
+### Notfallübungen
+IT-Audit
+Stromausfall einese Rechenzentrums
+Datenwiederherstellung (ein File, ein E-Mail und ein Server komplett)
+
+
+
+
 
 
 
