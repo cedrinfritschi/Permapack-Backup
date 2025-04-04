@@ -162,4 +162,3 @@ GBS Gewerbliches Berufs- und Weiterbildungszentrum St.Gallen
    a. Festplatten und SSDs befinden sich in einem RAID und werden bei einer Störung ohne Datenverlust ausgetauscht. Tapes werden ausgetauscht, wenn diese als «defekt» erkannt werden. Tapes die sich im Jahresband-Tresor befinden werden nur nach einem Jahr nochmals getestet. Ausfälle nach dieser Zeit werden nicht erfasst / erkannt / behoben.  
 7. **Wie schnell kann auf einen Serverausfall reagiert werden?**  
    a. Das interne SLA schreibt eine Reaktionszeit während der Arbeitszeit von max. 1 Stunde vor. Ausserhalb der Arbeitszeiten gilt eine Reaktionszeit von 4 Stunden.  
-Sent from my iPhone
